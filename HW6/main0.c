@@ -2,8 +2,8 @@
 
 int main()
 {
-    int i=2048,j;
-    j=i&i-1;
+    int i=10;
+    int j=i&i-1;
     if(j==0){
     printf("true");
     }else if(i==1){
