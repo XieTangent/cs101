@@ -17,7 +17,7 @@ int main()
     for(int r=1;r<=rows;r++){
         printf_space(r);
         printf_stars(rows,r);
-        printf("\n\n");
+        printf("\n");
     }
 
     return 0;
