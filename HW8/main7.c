@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int add(int a) {
+int get_add(int a) {
     int sum=0;
     if(a<0) {
         while(a>=10) {
@@ -22,7 +22,7 @@ int main()
 {
     int a=-999;
     int b=999;
-    printf("%d\n%d",add(a),add(b));
+    printf("%d\n%d",get_add(a),get_add(b));
 
     return 0;
 }
