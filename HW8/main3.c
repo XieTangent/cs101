@@ -1,45 +1,30 @@
 #include <stdio.h>
 
 void get_binary(int i) {
-    int j=16,m=0;
-    while(j-1<i) {
+    int j=16,k=0;
+    while(i>j-1) {
         j*=16;
     }
-    j/=2;
-    while(i) {
-        if(j>i) {
+    j>>=1;
+    while(j) {
+        if((i&j)==0) {
             printf("0");
-            j/=2;
-            m++;
-        }else if(j<i) {
+        }else {
             printf("1");
-            i-=j;
-            j/=2;
-            m++;
-        }else{
-            printf("1");
-            m++;
-            break;
         }
-        if(m==4) {
+        j>>=1;
+        k++;
+        if(k==4) {
             printf(" ");
-            m=0;
+            k=0;
         }
-    }
-    while(j!=1){
-        if(m==4){
-            printf(" ");
-            m=0;
-        }
-        printf("0");
-        m++;
-        j/=2;
     }
 }
 
-int main() {
-    int i=255;
+int main()
+{
+    int i=16;
     get_binary(i);
-
+    
     return 0;
 }
